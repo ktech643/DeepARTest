@@ -1,31 +1,10 @@
 import 'dart:async';
-import 'dart:io';
-import 'dart:typed_data';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-late List<CameraDescription> _cameras;
-
-class Throttler {
-  final int milliSeconds;
-  int? _lastActionTime;
-
-  Throttler({required this.milliSeconds});
-
-  void run(VoidCallback action) {
-    final currentTime = DateTime.now().millisecondsSinceEpoch;
-    if (_lastActionTime == null ||
-        currentTime - _lastActionTime! > milliSeconds) {
-      action();
-      _lastActionTime = currentTime;
-    }
-  }
-}
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  _cameras = await availableCameras();
   runApp(const MyApp());
 }
 
@@ -38,7 +17,6 @@ class MyApp extends StatelessWidget {
       title: 'Camera Stream',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const MyHomePage(),
-      // home: VideoStreamFromBytes(),
     );
   }
 }
@@ -52,14 +30,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late CameraController _controller;
-  late Throttler _throttler;
   Uint8List? _cameraImage;
   static const _platform = MethodChannel('SendForProcess');
 
   @override
   void initState() {
     super.initState();
-//    _throttler = Throttler(milliSeconds: 30); // Throttle image stream
 
     // _initializeCamera();
     _platform.invokeMethod<Uint8List>(
