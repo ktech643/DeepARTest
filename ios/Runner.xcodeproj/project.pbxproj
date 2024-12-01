@@ -8,16 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
-		1846925F2CAD4213C0E9F038 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECE2A867B599DD2B1486DE6 /* Pods_Runner.framework */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
+		823B047B0510932E0F2B37ED /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732D2D4438537EF46D74945A /* Pods_Runner.framework */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
+		C5DF72B82CFB520500D8EC4D /* Emotion_Meter.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72A72CFB520500D8EC4D /* Emotion_Meter.deepar */; };
+		C5DF72B92CFB520500D8EC4D /* Humanoid.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AD2CFB520500D8EC4D /* Humanoid.deepar */; };
+		C5DF72BA2CFB520500D8EC4D /* Pixel_Hearts.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B12CFB520500D8EC4D /* Pixel_Hearts.deepar */; };
+		C5DF72BB2CFB520500D8EC4D /* galaxy_background.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AB2CFB520500D8EC4D /* galaxy_background.deepar */; };
+		C5DF72BC2CFB520500D8EC4D /* Hope.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AC2CFB520500D8EC4D /* Hope.deepar */; };
+		C5DF72BD2CFB520500D8EC4D /* flower_face.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AA2CFB520500D8EC4D /* flower_face.deepar */; };
+		C5DF72BE2CFB520500D8EC4D /* Neon_Devil_Horns.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AF2CFB520500D8EC4D /* Neon_Devil_Horns.deepar */; };
+		C5DF72BF2CFB520500D8EC4D /* Fire_Effect.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72A92CFB520500D8EC4D /* Fire_Effect.deepar */; };
+		C5DF72C02CFB520500D8EC4D /* MakeupLook.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AE2CFB520500D8EC4D /* MakeupLook.deepar */; };
+		C5DF72C12CFB520500D8EC4D /* Split_View_Look.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B32CFB520500D8EC4D /* Split_View_Look.deepar */; };
+		C5DF72C22CFB520500D8EC4D /* Elephant_Trunk.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72A62CFB520500D8EC4D /* Elephant_Trunk.deepar */; };
+		C5DF72C32CFB520500D8EC4D /* Ping_Pong.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B02CFB520500D8EC4D /* Ping_Pong.deepar */; };
+		C5DF72C42CFB520500D8EC4D /* Stallone.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B42CFB520500D8EC4D /* Stallone.deepar */; };
+		C5DF72C52CFB520500D8EC4D /* Emotions_Exaggerator.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72A82CFB520500D8EC4D /* Emotions_Exaggerator.deepar */; };
+		C5DF72C62CFB520500D8EC4D /* viking_helmet.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B62CFB520500D8EC4D /* viking_helmet.deepar */; };
+		C5DF72C72CFB520500D8EC4D /* Snail.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B22CFB520500D8EC4D /* Snail.deepar */; };
+		C5DF72C82CFB520500D8EC4D /* burning_effect.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72A52CFB520500D8EC4D /* burning_effect.deepar */; };
+		C5DF72C92CFB520500D8EC4D /* Vendetta_Mask.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B52CFB520500D8EC4D /* Vendetta_Mask.deepar */; };
+		C5DF72CB2CFB54B000D8EC4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF72CA2CFB54B000D8EC4D /* ViewController.swift */; };
+		E147929E289168C800994038 /* PixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147929D289168C800994038 /* PixelBuffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
+		C5DF72A42CFB51D800D8EC4D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -32,10 +52,11 @@
 /* Begin PBXFileReference section */
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
-		2D9422A7D4A8C12EDB7D358D /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		732D2D4438537EF46D74945A /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		75C9FF6B89A04B5B07019C5B /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
@@ -44,9 +65,28 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B104279C0F3A75EF4AF5165C /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
-		BC8FEBA0A249D72D098377D8 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
-		BECE2A867B599DD2B1486DE6 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C286A06515B06B3603A97B81 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		C5DF72A52CFB520500D8EC4D /* burning_effect.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = burning_effect.deepar; sourceTree = "<group>"; };
+		C5DF72A62CFB520500D8EC4D /* Elephant_Trunk.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Elephant_Trunk.deepar; sourceTree = "<group>"; };
+		C5DF72A72CFB520500D8EC4D /* Emotion_Meter.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Emotion_Meter.deepar; sourceTree = "<group>"; };
+		C5DF72A82CFB520500D8EC4D /* Emotions_Exaggerator.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Emotions_Exaggerator.deepar; sourceTree = "<group>"; };
+		C5DF72A92CFB520500D8EC4D /* Fire_Effect.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fire_Effect.deepar; sourceTree = "<group>"; };
+		C5DF72AA2CFB520500D8EC4D /* flower_face.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = flower_face.deepar; sourceTree = "<group>"; };
+		C5DF72AB2CFB520500D8EC4D /* galaxy_background.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = galaxy_background.deepar; sourceTree = "<group>"; };
+		C5DF72AC2CFB520500D8EC4D /* Hope.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hope.deepar; sourceTree = "<group>"; };
+		C5DF72AD2CFB520500D8EC4D /* Humanoid.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Humanoid.deepar; sourceTree = "<group>"; };
+		C5DF72AE2CFB520500D8EC4D /* MakeupLook.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = MakeupLook.deepar; sourceTree = "<group>"; };
+		C5DF72AF2CFB520500D8EC4D /* Neon_Devil_Horns.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Neon_Devil_Horns.deepar; sourceTree = "<group>"; };
+		C5DF72B02CFB520500D8EC4D /* Ping_Pong.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ping_Pong.deepar; sourceTree = "<group>"; };
+		C5DF72B12CFB520500D8EC4D /* Pixel_Hearts.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixel_Hearts.deepar; sourceTree = "<group>"; };
+		C5DF72B22CFB520500D8EC4D /* Snail.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Snail.deepar; sourceTree = "<group>"; };
+		C5DF72B32CFB520500D8EC4D /* Split_View_Look.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Split_View_Look.deepar; sourceTree = "<group>"; };
+		C5DF72B42CFB520500D8EC4D /* Stallone.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stallone.deepar; sourceTree = "<group>"; };
+		C5DF72B52CFB520500D8EC4D /* Vendetta_Mask.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vendetta_Mask.deepar; sourceTree = "<group>"; };
+		C5DF72B62CFB520500D8EC4D /* viking_helmet.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = viking_helmet.deepar; sourceTree = "<group>"; };
+		C5DF72CA2CFB54B000D8EC4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E147929D289168C800994038 /* PixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelBuffer.swift; sourceTree = "<group>"; };
+		F5AD9A5B00B510D87DE9C12B /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,19 +94,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1846925F2CAD4213C0E9F038 /* Pods_Runner.framework in Frameworks */,
+				823B047B0510932E0F2B37ED /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7E14D2A87476548BD5C3E46D /* Frameworks */ = {
+		256A6598498D15DBD6C96367 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BECE2A867B599DD2B1486DE6 /* Pods_Runner.framework */,
+				732D2D4438537EF46D74945A /* Pods_Runner.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D33C954524940978FB674C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75C9FF6B89A04B5B07019C5B /* Pods-Runner.debug.xcconfig */,
+				F5AD9A5B00B510D87DE9C12B /* Pods-Runner.release.xcconfig */,
+				C286A06515B06B3603A97B81 /* Pods-Runner.profile.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		9740EEB11CF90186004384FC /* Flutter */ = {
@@ -86,8 +136,8 @@
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,
-				9D38E0939C6AF7B5AB181C96 /* Pods */,
-				7E14D2A87476548BD5C3E46D /* Frameworks */,
+				5D33C954524940978FB674C3 /* Pods */,
+				256A6598498D15DBD6C96367 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +152,9 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				C5DF72B72CFB520500D8EC4D /* Effects */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
+				E147929D289168C800994038 /* PixelBuffer.swift */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
 				97C147021CF9000F007C117D /* Info.plist */,
@@ -110,18 +162,34 @@
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
+				C5DF72CA2CFB54B000D8EC4D /* ViewController.swift */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
 		};
-		9D38E0939C6AF7B5AB181C96 /* Pods */ = {
+		C5DF72B72CFB520500D8EC4D /* Effects */ = {
 			isa = PBXGroup;
 			children = (
-				BC8FEBA0A249D72D098377D8 /* Pods-Runner.debug.xcconfig */,
-				B104279C0F3A75EF4AF5165C /* Pods-Runner.release.xcconfig */,
-				2D9422A7D4A8C12EDB7D358D /* Pods-Runner.profile.xcconfig */,
+				C5DF72A52CFB520500D8EC4D /* burning_effect.deepar */,
+				C5DF72A62CFB520500D8EC4D /* Elephant_Trunk.deepar */,
+				C5DF72A72CFB520500D8EC4D /* Emotion_Meter.deepar */,
+				C5DF72A82CFB520500D8EC4D /* Emotions_Exaggerator.deepar */,
+				C5DF72A92CFB520500D8EC4D /* Fire_Effect.deepar */,
+				C5DF72AA2CFB520500D8EC4D /* flower_face.deepar */,
+				C5DF72AB2CFB520500D8EC4D /* galaxy_background.deepar */,
+				C5DF72AC2CFB520500D8EC4D /* Hope.deepar */,
+				C5DF72AD2CFB520500D8EC4D /* Humanoid.deepar */,
+				C5DF72AE2CFB520500D8EC4D /* MakeupLook.deepar */,
+				C5DF72AF2CFB520500D8EC4D /* Neon_Devil_Horns.deepar */,
+				C5DF72B02CFB520500D8EC4D /* Ping_Pong.deepar */,
+				C5DF72B12CFB520500D8EC4D /* Pixel_Hearts.deepar */,
+				C5DF72B22CFB520500D8EC4D /* Snail.deepar */,
+				C5DF72B32CFB520500D8EC4D /* Split_View_Look.deepar */,
+				C5DF72B42CFB520500D8EC4D /* Stallone.deepar */,
+				C5DF72B52CFB520500D8EC4D /* Vendetta_Mask.deepar */,
+				C5DF72B62CFB520500D8EC4D /* viking_helmet.deepar */,
 			);
-			path = Pods;
+			path = Effects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,14 +199,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
-				44A949B37FD6ECE5C0883AF1 /* [CP] Check Pods Manifest.lock */,
+				89A67E4CF6DF676A89EA7EA1 /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
-				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
-				BED82AFA63DB73C2EAFF65E9 /* [CP] Embed Pods Frameworks */,
+				F7B2EF417F3CF52D02C1522A /* [CP] Embed Pods Frameworks */,
+				C5DF72A42CFB51D800D8EC4D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +257,24 @@
 			files = (
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
+				C5DF72B82CFB520500D8EC4D /* Emotion_Meter.deepar in Resources */,
+				C5DF72B92CFB520500D8EC4D /* Humanoid.deepar in Resources */,
+				C5DF72BA2CFB520500D8EC4D /* Pixel_Hearts.deepar in Resources */,
+				C5DF72BB2CFB520500D8EC4D /* galaxy_background.deepar in Resources */,
+				C5DF72BC2CFB520500D8EC4D /* Hope.deepar in Resources */,
+				C5DF72BD2CFB520500D8EC4D /* flower_face.deepar in Resources */,
+				C5DF72BE2CFB520500D8EC4D /* Neon_Devil_Horns.deepar in Resources */,
+				C5DF72BF2CFB520500D8EC4D /* Fire_Effect.deepar in Resources */,
+				C5DF72C02CFB520500D8EC4D /* MakeupLook.deepar in Resources */,
+				C5DF72C12CFB520500D8EC4D /* Split_View_Look.deepar in Resources */,
+				C5DF72C22CFB520500D8EC4D /* Elephant_Trunk.deepar in Resources */,
+				C5DF72C32CFB520500D8EC4D /* Ping_Pong.deepar in Resources */,
+				C5DF72C42CFB520500D8EC4D /* Stallone.deepar in Resources */,
+				C5DF72C52CFB520500D8EC4D /* Emotions_Exaggerator.deepar in Resources */,
+				C5DF72C62CFB520500D8EC4D /* viking_helmet.deepar in Resources */,
+				C5DF72C72CFB520500D8EC4D /* Snail.deepar in Resources */,
+				C5DF72C82CFB520500D8EC4D /* burning_effect.deepar in Resources */,
+				C5DF72C92CFB520500D8EC4D /* Vendetta_Mask.deepar in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
 			);
@@ -213,7 +299,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
 		};
-		44A949B37FD6ECE5C0883AF1 /* [CP] Check Pods Manifest.lock */ = {
+		89A67E4CF6DF676A89EA7EA1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -250,7 +336,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
 		};
-		BED82AFA63DB73C2EAFF65E9 /* [CP] Embed Pods Frameworks */ = {
+		F7B2EF417F3CF52D02C1522A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,6 +361,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
+				E147929E289168C800994038 /* PixelBuffer.swift in Sources */,
+				C5DF72CB2CFB54B000D8EC4D /* ViewController.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +412,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -361,19 +448,11 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 3592CW2YHH;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Flutter",
-				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Flutter",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktc.mytest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -406,7 +485,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -462,7 +540,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -501,19 +578,11 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 3592CW2YHH;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Flutter",
-				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Flutter",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktc.mytest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -533,19 +602,11 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 3592CW2YHH;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Flutter",
-				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Flutter",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktc.mytest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

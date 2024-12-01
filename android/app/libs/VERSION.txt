@@ -1,1 +1,0 @@
-DeepAR SDK version: v5.6.12

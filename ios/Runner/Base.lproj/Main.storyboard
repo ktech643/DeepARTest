@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Flutter View Controller-->
@@ -14,13 +17,127 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-21" y="-40"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="d3t-ib-DxK">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="YIT-2M-rIk" customClass="ViewController" customModule="Runner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yyQ-z6-LzO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="4w5-4G-u7h">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zsE-WP-Sff">
+                                <rect key="frame" x="0.0" y="676" width="414" height="102"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvf-Kb-KHb">
+                                        <rect key="frame" x="0.0" y="16" width="138" height="70"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="50"/>
+                                        <state key="normal" title="‹">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0E0-bF-qzh">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="102"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                        <state key="normal" title="◉">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vN-0I-Q2X">
+                                        <rect key="frame" x="276" y="16" width="138" height="70"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="50"/>
+                                        <state key="normal" title="›">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xfd-le-cQY" userLabel="Recording Mode Stack View">
+                                <rect key="frame" x="76.666666666666686" y="627" width="261" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FJ-Xk-N9c" userLabel="Photo">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Photo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMn-1N-JfY" userLabel="Video">
+                                        <rect key="frame" x="84.999999999999986" y="0.0" width="44.000000000000014" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Video">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5x-Fy-9nP" userLabel="LowQ Video">
+                                        <rect key="frame" x="169" y="0.0" width="92" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="LowQ Video">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="D3l-gJ-WHf"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e3-kW-eq3">
+                                <rect key="frame" x="24" y="75" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="DX1-oE-ZJr"/>
+                                    <constraint firstAttribute="height" constant="44" id="k5e-Eh-MrA"/>
+                                </constraints>
+                                <state key="normal" image="SwitchCamera"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QEh-5f-jcU"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QEh-5f-jcU" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xfd-le-cQY" secondAttribute="trailing" constant="16" id="8Lp-al-8ou"/>
+                            <constraint firstItem="4w5-4G-u7h" firstAttribute="top" secondItem="yyQ-z6-LzO" secondAttribute="top" id="CW3-kr-0Yi"/>
+                            <constraint firstItem="7e3-kW-eq3" firstAttribute="top" secondItem="QEh-5f-jcU" secondAttribute="top" constant="16" id="L5X-I2-enO"/>
+                            <constraint firstItem="4w5-4G-u7h" firstAttribute="leading" secondItem="yyQ-z6-LzO" secondAttribute="leading" id="O5w-hs-T9z"/>
+                            <constraint firstItem="zsE-WP-Sff" firstAttribute="leading" secondItem="QEh-5f-jcU" secondAttribute="leading" id="Ph8-vc-wXh"/>
+                            <constraint firstAttribute="trailing" secondItem="4w5-4G-u7h" secondAttribute="trailing" id="Q42-fz-7WU"/>
+                            <constraint firstItem="7e3-kW-eq3" firstAttribute="leading" secondItem="QEh-5f-jcU" secondAttribute="leading" constant="24" id="QoF-do-XP7"/>
+                            <constraint firstItem="QEh-5f-jcU" firstAttribute="trailing" secondItem="zsE-WP-Sff" secondAttribute="trailing" id="V8g-XD-pUz"/>
+                            <constraint firstItem="xfd-le-cQY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QEh-5f-jcU" secondAttribute="leading" constant="16" id="g2t-pw-HFD"/>
+                            <constraint firstItem="xfd-le-cQY" firstAttribute="centerX" secondItem="yyQ-z6-LzO" secondAttribute="centerX" id="hci-cQ-CzW"/>
+                            <constraint firstItem="zsE-WP-Sff" firstAttribute="top" secondItem="xfd-le-cQY" secondAttribute="bottom" constant="5" id="pqO-fM-Gtc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zsE-WP-Sff" secondAttribute="bottom" constant="40" id="rKC-1I-xEe"/>
+                            <constraint firstAttribute="bottom" secondItem="4w5-4G-u7h" secondAttribute="bottom" id="vIb-NQ-35S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arViewContainer" destination="4w5-4G-u7h" id="hB9-vC-rbw"/>
+                        <outlet property="lowQVideoButton" destination="q5x-Fy-9nP" id="tJQ-lg-6iW"/>
+                        <outlet property="nextButton" destination="3vN-0I-Q2X" id="puG-2n-dWz"/>
+                        <outlet property="photoButton" destination="5FJ-Xk-N9c" id="XXw-qf-25d"/>
+                        <outlet property="previousButton" destination="dvf-Kb-KHb" id="BpY-9T-tEc"/>
+                        <outlet property="recordActionButton" destination="0E0-bF-qzh" id="dwa-wc-1Ej"/>
+                        <outlet property="switchCameraButton" destination="7e3-kW-eq3" id="Fng-51-Tto"/>
+                        <outlet property="videoButton" destination="AMn-1N-JfY" id="gYx-lw-ELx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etZ-vZ-X7w" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="37"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SwitchCamera" width="31" height="26"/>
+    </resources>
 </document>

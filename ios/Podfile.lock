@@ -1,41 +1,49 @@
 PODS:
-  - camera_deep_ar (0.0.1):
+  - camera_avfoundation (0.0.1):
+    - Flutter
+  - DeepAR (5.6.12)
+  - ffmpeg-kit-ios-https (4.5.1)
+  - ffmpeg_kit_flutter (4.5.1):
+    - ffmpeg_kit_flutter/https (= 4.5.1)
+    - Flutter
+  - ffmpeg_kit_flutter/https (4.5.1):
+    - ffmpeg-kit-ios-https (= 4.5.1)
     - Flutter
   - Flutter (1.0.0)
-  - image_picker_ios (0.0.1):
-    - Flutter
-  - path_provider_foundation (0.0.1):
+  - video_player_avfoundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - "permission_handler (5.1.0+2)":
-    - Flutter
 
 DEPENDENCIES:
-  - camera_deep_ar (from `.symlinks/plugins/camera_deep_ar/ios`)
+  - camera_avfoundation (from `.symlinks/plugins/camera_avfoundation/ios`)
+  - DeepAR
+  - ffmpeg_kit_flutter (from `.symlinks/plugins/ffmpeg_kit_flutter/ios`)
   - Flutter (from `Flutter`)
-  - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
-  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
-  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
+  - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/darwin`)
+
+SPEC REPOS:
+  trunk:
+    - DeepAR
+    - ffmpeg-kit-ios-https
 
 EXTERNAL SOURCES:
-  camera_deep_ar:
-    :path: ".symlinks/plugins/camera_deep_ar/ios"
+  camera_avfoundation:
+    :path: ".symlinks/plugins/camera_avfoundation/ios"
+  ffmpeg_kit_flutter:
+    :path: ".symlinks/plugins/ffmpeg_kit_flutter/ios"
   Flutter:
     :path: Flutter
-  image_picker_ios:
-    :path: ".symlinks/plugins/image_picker_ios/ios"
-  path_provider_foundation:
-    :path: ".symlinks/plugins/path_provider_foundation/darwin"
-  permission_handler:
-    :path: ".symlinks/plugins/permission_handler/ios"
+  video_player_avfoundation:
+    :path: ".symlinks/plugins/video_player_avfoundation/darwin"
 
 SPEC CHECKSUMS:
-  camera_deep_ar: 2a6843f97304f77c3af80cdd3d4c67e5d48909d2
+  camera_avfoundation: dd002b0330f4981e1bbcb46ae9b62829237459a4
+  DeepAR: b55243ee23fd010eb05ddbca9cb421209b02002c
+  ffmpeg-kit-ios-https: cec24d405b511e4f274980d8a9c751d384f89558
+  ffmpeg_kit_flutter: e2f0bd6b75e361faeee3b34c70650d3ec6ec35d0
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  image_picker_ios: c560581cceedb403a6ff17f2f816d7fea1421fc1
-  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
-  permission_handler: ccb20a9fad0ee9b1314a52b70b76b473c5f8dab0
+  video_player_avfoundation: 7c6c11d8470e1675df7397027218274b6d2360b3
 
-PODFILE CHECKSUM: 6403951e3c7c4fcffbe9ecf713fff2ab1576d15f
+PODFILE CHECKSUM: ebc72517f9ee30cb0d8b7838d2522962e5bd6465
 
 COCOAPODS: 1.15.2
