@@ -20,27 +20,45 @@ extension UIApplication {
     }
 }
 
+enum Effects: String, CaseIterable {
+    case viking_helmet = "viking_helmet.deepar"
+    case MakeupLook = "MakeupLook.deepar"
+    case Split_View_Look = "Split_View_Look.deepar"
+    case Emotions_Exaggerator = "Emotions_Exaggerator.deepar"
+    case Emotion_Meter = "Emotion_Meter.deepar"
+    case Stallone = "Stallone.deepar"
+    case flower_face = "flower_face.deepar"
+    case galaxy_background = "galaxy_background.deepar"
+    case Humanoid = "Humanoid.deepar"
+    case Neon_Devil_Horns = "Neon_Devil_Horns.deepar"
+    case Ping_Pong = "Ping_Pong.deepar"
+    case Pixel_Hearts = "Pixel_Hearts.deepar"
+    case Snail = "Snail.deepar"
+    case Hope = "Hope.deepar"
+    case Vendetta_Mask = "Vendetta_Mask.deepar"
+    case Fire_Effect = "Fire_Effect.deepar"
+    case burning_effect = "burning_effect.deepar"
+    case Elephant_Trunk = "Elephant_Trunk.deepar"
+}
+
 @main
 @objc class AppDelegate: FlutterAppDelegate {
         
     private var methodChannel: FlutterMethodChannel?
-    var deepAR: DeepAR!
-    var cameraController: CameraController!
-    var arView: UIView!
-    private var effectIndex: Int = 2
+        
+    private var deepAR: DeepAR!
+    
+    // This class handles camera interaction. Start/stop feed, check permissions etc. You can use it or you
+    // can provide your own implementation
+    private var cameraController: CameraController!
+    
+    // MARK: - Private properties -
+
+    private var effectIndex: Int = 0
     private var effectPaths: [String?] {
         return Effects.allCases.map { $0.rawValue.path }
     }
     
-    private func appltEffect(index : Int) {
-        var path: String?
-        effectIndex = index
-        path = effectPaths[effectIndex]
-        deepAR.switchEffect(withSlot: "effect", path: path)
-    }
-    let vc = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "ViewController") as! ViewController
-    
-    var isLoadView = false
     override func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
@@ -59,14 +77,7 @@ extension UIApplication {
                 switch call.method {
                 case "checkLiveness":
                     if let data = call.arguments as? [String: Any] {
-                        if self.isLoadView == false {
-                            vc.methodChannel = self.methodChannel
-                            isLoadView = true
-                            vc.loadView()
-                            vc.viewDidLoad()
-                        }else {
-                            
-                        }
+                        setupDeepARAndCamera()
                       //  self?.checkLiveness(data: data)
                        // self?.deepAR.takeScreenshot()
                     } else {
@@ -87,89 +98,44 @@ extension UIApplication {
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
-    private func checkLiveness(data: [String: Any]) {
-        guard let imageWidth = data["width"] as? Int, let imageHeight = data["height"] as? Int else { return }
+    private func setupDeepARAndCamera() {
         
-       // Initialize Liveness over here
-        
-        guard let flutterData = data["platforms"] as? FlutterStandardTypedData,
-              let bytesPerRow = data["bytesPerRow"] as? Int else {
-            return
-        }
-        
-        guard let image = createUIImageFromRawData(data: flutterData.data,
-                                                   imageWidth: imageWidth,
-                                                   imageHeight: imageHeight,
-                                                   bytes: bytesPerRow) else {
-            return
-        }
-        // Feed image into liveness
-        print(image)
-        if let imageData = image.jpegData(compressionQuality: 0.8) {
-            methodChannel?.invokeMethod("updateCameraFrame", arguments: imageData)
-        }
+        self.deepAR = DeepAR()
+        self.deepAR.delegate = self
+        self.deepAR.setLicenseKey("8e2d8c59efc7a141b49c2422c0dfedbcf6cacc0e0b540779f45d928ad54718f68ccbd8fd41ac5fb7")
+        deepAR.changeLiveMode(false)
+        deepAR.initializeOffscreen(withWidth: 720, height: 1080)
+        cameraController = CameraController()
+        cameraController.deepAR = self.deepAR
+        self.deepAR.videoRecordingWarmupEnabled = false;
+
+        cameraController.startCamera(withAudio: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
+                guard let self = self else { return }
+            didLoadNextFilter()
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
+                guard let self = self else { return }
+            didLoadNextFilter()
+        })
     }
    
-    // Group of util to convert image
-    private func bytesToPixelBuffer(width: Int, height: Int, baseAddress: UnsafeMutableRawPointer, bytesPerRow: Int) -> CVBuffer? {
-        var dstPixelBuffer: CVBuffer?
-        CVPixelBufferCreateWithBytes(kCFAllocatorDefault, width, height, kCVPixelFormatType_32BGRA, baseAddress, bytesPerRow,
-                                     nil, nil, nil, &dstPixelBuffer)
-        return dstPixelBuffer ?? nil
+    func didLoadPrevFilter() {
+        var path: String?
+        effectIndex = (effectIndex - 1 < 0) ? (effectPaths.count - 1) : (effectIndex - 1)
+        path = effectPaths[effectIndex]
+        deepAR.switchEffect(withSlot: "effect", path: path)
     }
     
-    private func createImage(from pixelBuffer: CVPixelBuffer) -> CGImage? {
-        var cgImage: CGImage?
-        VTCreateCGImageFromCVPixelBuffer(pixelBuffer, options: nil, imageOut: &cgImage)
-        return cgImage
+    func didLoadNextFilter() {
+        var path: String?
+        effectIndex = (effectIndex + 1 > effectPaths.count - 1) ? 0 : (effectIndex + 1)
+        path = effectPaths[effectIndex]
+        deepAR.switchEffect(withSlot: "effect", path: path)
     }
-    
-    private func createUIImageFromRawData(data: Data, imageWidth: Int, imageHeight: Int, bytes: Int) -> UIImage? {
-        data.withUnsafeBytes { rawBufferPointer in
-            let rawPtr = rawBufferPointer.baseAddress!
-            let address = UnsafeMutableRawPointer(mutating:rawPtr)
-            guard let pxBuffer = bytesToPixelBuffer(width: imageWidth, height: imageHeight, baseAddress: address, bytesPerRow: bytes), let copyImage = pxBuffer.copy() , let cgiImage = createImage(from: pxBuffer) else {
-                return nil
-            }
-            
-            return UIImage(cgImage: cgiImage)
-        }
-    }
-    
 }
 
-
-extension AppDelegate: DeepARDelegate {
-    func didFinishPreparingForVideoRecording() {}
-    
-    func didStartVideoRecording() {}
-    
-    func frameAvailable(_ sampleBuffer: CMSampleBuffer!) {
-        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
-            print("*** NO BUFFER ERROR")
-            return
-        }
-        
-        let time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
-        
-        if let imageData = cvImageBufferToData(pixelBuffer: pixelBuffer) {
-            methodChannel?.invokeMethod("updateCameraFrame", arguments: imageData)
-        }
-    }
-//    func frameAvailable(_ sampleBuffer: CMSampleBuffer!) {
-//        
-//        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
-//            print("*** NO BUFFER ERROR")
-//            return
-//        }
-//
-//        let time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
-//        
-//        if let imageData = cvImageBufferToData(pixelBuffer: pixelBuffer) {
-//            methodChannel?.invokeMethod("updateCameraFrame", arguments: imageData)
-//        }
-//        
-//    }
+extension AppDelegate : DeepARDelegate {
     
     func cvImageBufferToData(pixelBuffer: CVImageBuffer, compressionQuality: CGFloat = 0.8) -> Data? {
         // 1. Lock the pixel buffer for thread-safe access.
@@ -199,25 +165,58 @@ extension AppDelegate: DeepARDelegate {
         // return image.pngData()
     }
     
-    func didFinishVideoRecording(_ videoFilePath: String!) {
-        
-    }
-    
-    func recordingFailedWithError(_ error: Error!) {
-        print(error.localizedDescription)
-    }
-    
-    func didTakeScreenshot(_ screenshot: UIImage!) {
-        if let imageData = screenshot.jpegData(compressionQuality: 0.8) {
+    func frameAvailable(_ sampleBuffer: CMSampleBuffer!) {
+        print("My Buffer:",sampleBuffer ?? "")
+        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            print("*** NO BUFFER ERROR")
+            return
+        }
+        let image = cvImageBufferToData(pixelBuffer: pixelBuffer)
+        if let imageData = cvImageBufferToData(pixelBuffer: pixelBuffer) {
             methodChannel?.invokeMethod("updateCameraFrame", arguments: imageData)
         }
     }
-    
-    func didInitialize() {
-        print("Init Deep AR")
+    func didFinishPreparingForVideoRecording() {
+        NSLog("didFinishPreparingForVideoRecording!!!!!")
     }
     
-    func faceVisiblityDidChange(_ faceVisible: Bool) {
-        print("Init Deep AR",faceVisible)
+    func didStartVideoRecording() {
+        NSLog("didStartVideoRecording!!!!!")
+    }
+    
+    func didFinishVideoRecording(_ videoFilePath: String!) {
+        
+        NSLog("didFinishVideoRecording!!!!!")
+
+    }
+    
+    func recordingFailedWithError(_ error: Error!) {}
+    
+    func didTakeScreenshot(_ screenshot: UIImage!) {
+        
+    }
+    
+    func didInitialize() {
+        if (deepAR.videoRecordingWarmupEnabled) {
+            DispatchQueue.main.async { [self] in
+                let width: Int32 = Int32(deepAR.renderingResolution.width)
+                let height: Int32 =  Int32(deepAR.renderingResolution.height)
+                deepAR.startVideoRecording(withOutputWidth: width, outputHeight: height)
+            }
+        }
+    }
+    
+    
+    func didFinishShutdown (){
+        NSLog("didFinishShutdown!!!!!")
+    }
+    
+    func faceVisiblityDidChange(_ faceVisible: Bool) {}
+}
+
+
+extension String {
+    var path: String? {
+        return Bundle.main.path(forResource: self, ofType: nil)
     }
 }

@@ -1,0 +1,6 @@
+framework module flutter_ffmpeg {
+  umbrella header "flutter_ffmpeg-umbrella.h"
+
+  export *
+  module * { export * }
+}
