@@ -8,7 +8,6 @@
 import UIKit
 import Flutter
 import VideoToolbox
-import DeepAR
 
 @main
 @objc class AppDelegate: FlutterAppDelegate {
@@ -53,9 +52,19 @@ import DeepAR
                 }
             })
             methodChannel = FlutterMethodChannel(name: "SendForProcess", binaryMessenger: controller.binaryMessenger)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: { [weak self] in
+                guard let self = self else { return }
+                closeStream()
+            })
         }
         GeneratedPluginRegistrant.register(with: self)
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+    
+    func closeStream(){
+        streamSprint.dispose()
+        streamSprint = nil
     }
     
 }

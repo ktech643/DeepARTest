@@ -14,40 +14,26 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
-		C5B1F9632CFE43FD0080E8AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B1F9622CFE43FD0080E8AF /* Constants.swift */; };
-		C5B1F9652CFE44870080E8AF /* StreamSprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B1F9642CFE44310080E8AF /* StreamSprint.swift */; };
-		C5DF72B82CFB520500D8EC4D /* Emotion_Meter.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72A72CFB520500D8EC4D /* Emotion_Meter.deepar */; };
-		C5DF72B92CFB520500D8EC4D /* Humanoid.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AD2CFB520500D8EC4D /* Humanoid.deepar */; };
-		C5DF72BA2CFB520500D8EC4D /* Pixel_Hearts.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B12CFB520500D8EC4D /* Pixel_Hearts.deepar */; };
-		C5DF72BB2CFB520500D8EC4D /* galaxy_background.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AB2CFB520500D8EC4D /* galaxy_background.deepar */; };
-		C5DF72BC2CFB520500D8EC4D /* Hope.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AC2CFB520500D8EC4D /* Hope.deepar */; };
-		C5DF72BD2CFB520500D8EC4D /* flower_face.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AA2CFB520500D8EC4D /* flower_face.deepar */; };
-		C5DF72BE2CFB520500D8EC4D /* Neon_Devil_Horns.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AF2CFB520500D8EC4D /* Neon_Devil_Horns.deepar */; };
-		C5DF72BF2CFB520500D8EC4D /* Fire_Effect.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72A92CFB520500D8EC4D /* Fire_Effect.deepar */; };
-		C5DF72C02CFB520500D8EC4D /* MakeupLook.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72AE2CFB520500D8EC4D /* MakeupLook.deepar */; };
-		C5DF72C12CFB520500D8EC4D /* Split_View_Look.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B32CFB520500D8EC4D /* Split_View_Look.deepar */; };
-		C5DF72C22CFB520500D8EC4D /* Elephant_Trunk.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72A62CFB520500D8EC4D /* Elephant_Trunk.deepar */; };
-		C5DF72C32CFB520500D8EC4D /* Ping_Pong.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B02CFB520500D8EC4D /* Ping_Pong.deepar */; };
-		C5DF72C42CFB520500D8EC4D /* Stallone.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B42CFB520500D8EC4D /* Stallone.deepar */; };
-		C5DF72C52CFB520500D8EC4D /* Emotions_Exaggerator.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72A82CFB520500D8EC4D /* Emotions_Exaggerator.deepar */; };
-		C5DF72C62CFB520500D8EC4D /* viking_helmet.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B62CFB520500D8EC4D /* viking_helmet.deepar */; };
-		C5DF72C72CFB520500D8EC4D /* Snail.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B22CFB520500D8EC4D /* Snail.deepar */; };
-		C5DF72C82CFB520500D8EC4D /* burning_effect.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72A52CFB520500D8EC4D /* burning_effect.deepar */; };
-		C5DF72C92CFB520500D8EC4D /* Vendetta_Mask.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5DF72B52CFB520500D8EC4D /* Vendetta_Mask.deepar */; };
+		C5B1FA062CFE55BA0080E8AF /* Stallone.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9FF2CFE55BA0080E8AF /* Stallone.deepar */; };
+		C5B1FA072CFE55BA0080E8AF /* burning_effect.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9F02CFE55BA0080E8AF /* burning_effect.deepar */; };
+		C5B1FA082CFE55BA0080E8AF /* Elephant_Trunk.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9F12CFE55BA0080E8AF /* Elephant_Trunk.deepar */; };
+		C5B1FA092CFE55BA0080E8AF /* Ping_Pong.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9FB2CFE55BA0080E8AF /* Ping_Pong.deepar */; };
+		C5B1FA0A2CFE55BA0080E8AF /* Humanoid.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9F82CFE55BA0080E8AF /* Humanoid.deepar */; };
+		C5B1FA0B2CFE55BA0080E8AF /* Hope.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9F72CFE55BA0080E8AF /* Hope.deepar */; };
+		C5B1FA0C2CFE55BA0080E8AF /* Emotions_Exaggerator.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9F32CFE55BA0080E8AF /* Emotions_Exaggerator.deepar */; };
+		C5B1FA0D2CFE55BA0080E8AF /* Split_View_Look.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9FE2CFE55BA0080E8AF /* Split_View_Look.deepar */; };
+		C5B1FA0E2CFE55BA0080E8AF /* Neon_Devil_Horns.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9FA2CFE55BA0080E8AF /* Neon_Devil_Horns.deepar */; };
+		C5B1FA0F2CFE55BA0080E8AF /* flower_face.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9F52CFE55BA0080E8AF /* flower_face.deepar */; };
+		C5B1FA102CFE55BA0080E8AF /* Fire_Effect.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9F42CFE55BA0080E8AF /* Fire_Effect.deepar */; };
+		C5B1FA112CFE55BA0080E8AF /* galaxy_background.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9F62CFE55BA0080E8AF /* galaxy_background.deepar */; };
+		C5B1FA122CFE55BA0080E8AF /* Pixel_Hearts.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9FC2CFE55BA0080E8AF /* Pixel_Hearts.deepar */; };
+		C5B1FA132CFE55BA0080E8AF /* Snail.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9FD2CFE55BA0080E8AF /* Snail.deepar */; };
+		C5B1FA142CFE55BA0080E8AF /* MakeupLook.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9F92CFE55BA0080E8AF /* MakeupLook.deepar */; };
+		C5B1FA152CFE55BA0080E8AF /* Vendetta_Mask.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1FA002CFE55BA0080E8AF /* Vendetta_Mask.deepar */; };
+		C5B1FA162CFE55BA0080E8AF /* Emotion_Meter.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1F9F22CFE55BA0080E8AF /* Emotion_Meter.deepar */; };
+		C5B1FA172CFE55BA0080E8AF /* viking_helmet.deepar in Resources */ = {isa = PBXBuildFile; fileRef = C5B1FA012CFE55BA0080E8AF /* viking_helmet.deepar */; };
+		C5B1FA182CFE55BA0080E8AF /* StreamSprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B1FA042CFE55BA0080E8AF /* StreamSprint.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C5DF72A42CFB51D800D8EC4D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
@@ -66,26 +52,25 @@
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C286A06515B06B3603A97B81 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
-		C5B1F9622CFE43FD0080E8AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C5B1F9642CFE44310080E8AF /* StreamSprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamSprint.swift; sourceTree = "<group>"; };
-		C5DF72A52CFB520500D8EC4D /* burning_effect.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = burning_effect.deepar; sourceTree = "<group>"; };
-		C5DF72A62CFB520500D8EC4D /* Elephant_Trunk.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Elephant_Trunk.deepar; sourceTree = "<group>"; };
-		C5DF72A72CFB520500D8EC4D /* Emotion_Meter.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Emotion_Meter.deepar; sourceTree = "<group>"; };
-		C5DF72A82CFB520500D8EC4D /* Emotions_Exaggerator.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Emotions_Exaggerator.deepar; sourceTree = "<group>"; };
-		C5DF72A92CFB520500D8EC4D /* Fire_Effect.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fire_Effect.deepar; sourceTree = "<group>"; };
-		C5DF72AA2CFB520500D8EC4D /* flower_face.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = flower_face.deepar; sourceTree = "<group>"; };
-		C5DF72AB2CFB520500D8EC4D /* galaxy_background.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = galaxy_background.deepar; sourceTree = "<group>"; };
-		C5DF72AC2CFB520500D8EC4D /* Hope.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hope.deepar; sourceTree = "<group>"; };
-		C5DF72AD2CFB520500D8EC4D /* Humanoid.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Humanoid.deepar; sourceTree = "<group>"; };
-		C5DF72AE2CFB520500D8EC4D /* MakeupLook.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = MakeupLook.deepar; sourceTree = "<group>"; };
-		C5DF72AF2CFB520500D8EC4D /* Neon_Devil_Horns.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Neon_Devil_Horns.deepar; sourceTree = "<group>"; };
-		C5DF72B02CFB520500D8EC4D /* Ping_Pong.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ping_Pong.deepar; sourceTree = "<group>"; };
-		C5DF72B12CFB520500D8EC4D /* Pixel_Hearts.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixel_Hearts.deepar; sourceTree = "<group>"; };
-		C5DF72B22CFB520500D8EC4D /* Snail.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Snail.deepar; sourceTree = "<group>"; };
-		C5DF72B32CFB520500D8EC4D /* Split_View_Look.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Split_View_Look.deepar; sourceTree = "<group>"; };
-		C5DF72B42CFB520500D8EC4D /* Stallone.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stallone.deepar; sourceTree = "<group>"; };
-		C5DF72B52CFB520500D8EC4D /* Vendetta_Mask.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vendetta_Mask.deepar; sourceTree = "<group>"; };
-		C5DF72B62CFB520500D8EC4D /* viking_helmet.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = viking_helmet.deepar; sourceTree = "<group>"; };
+		C5B1F9F02CFE55BA0080E8AF /* burning_effect.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = burning_effect.deepar; sourceTree = "<group>"; };
+		C5B1F9F12CFE55BA0080E8AF /* Elephant_Trunk.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Elephant_Trunk.deepar; sourceTree = "<group>"; };
+		C5B1F9F22CFE55BA0080E8AF /* Emotion_Meter.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Emotion_Meter.deepar; sourceTree = "<group>"; };
+		C5B1F9F32CFE55BA0080E8AF /* Emotions_Exaggerator.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Emotions_Exaggerator.deepar; sourceTree = "<group>"; };
+		C5B1F9F42CFE55BA0080E8AF /* Fire_Effect.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fire_Effect.deepar; sourceTree = "<group>"; };
+		C5B1F9F52CFE55BA0080E8AF /* flower_face.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = flower_face.deepar; sourceTree = "<group>"; };
+		C5B1F9F62CFE55BA0080E8AF /* galaxy_background.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = galaxy_background.deepar; sourceTree = "<group>"; };
+		C5B1F9F72CFE55BA0080E8AF /* Hope.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hope.deepar; sourceTree = "<group>"; };
+		C5B1F9F82CFE55BA0080E8AF /* Humanoid.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Humanoid.deepar; sourceTree = "<group>"; };
+		C5B1F9F92CFE55BA0080E8AF /* MakeupLook.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = MakeupLook.deepar; sourceTree = "<group>"; };
+		C5B1F9FA2CFE55BA0080E8AF /* Neon_Devil_Horns.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Neon_Devil_Horns.deepar; sourceTree = "<group>"; };
+		C5B1F9FB2CFE55BA0080E8AF /* Ping_Pong.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ping_Pong.deepar; sourceTree = "<group>"; };
+		C5B1F9FC2CFE55BA0080E8AF /* Pixel_Hearts.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixel_Hearts.deepar; sourceTree = "<group>"; };
+		C5B1F9FD2CFE55BA0080E8AF /* Snail.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Snail.deepar; sourceTree = "<group>"; };
+		C5B1F9FE2CFE55BA0080E8AF /* Split_View_Look.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Split_View_Look.deepar; sourceTree = "<group>"; };
+		C5B1F9FF2CFE55BA0080E8AF /* Stallone.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stallone.deepar; sourceTree = "<group>"; };
+		C5B1FA002CFE55BA0080E8AF /* Vendetta_Mask.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vendetta_Mask.deepar; sourceTree = "<group>"; };
+		C5B1FA012CFE55BA0080E8AF /* viking_helmet.deepar */ = {isa = PBXFileReference; lastKnownFileType = file; path = viking_helmet.deepar; sourceTree = "<group>"; };
+		C5B1FA042CFE55BA0080E8AF /* StreamSprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamSprint.swift; sourceTree = "<group>"; };
 		F5AD9A5B00B510D87DE9C12B /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,7 +137,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
-				C5B1F9612CFE43DB0080E8AF /* Streaming */,
+				C5B1FA052CFE55BA0080E8AF /* Streaming */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -165,39 +150,38 @@
 			path = Runner;
 			sourceTree = "<group>";
 		};
-		C5B1F9612CFE43DB0080E8AF /* Streaming */ = {
+		C5B1FA022CFE55BA0080E8AF /* Effects */ = {
 			isa = PBXGroup;
 			children = (
-				C5DF72B72CFB520500D8EC4D /* Effects */,
-				C5B1F9642CFE44310080E8AF /* StreamSprint.swift */,
-				C5B1F9622CFE43FD0080E8AF /* Constants.swift */,
-			);
-			path = Streaming;
-			sourceTree = "<group>";
-		};
-		C5DF72B72CFB520500D8EC4D /* Effects */ = {
-			isa = PBXGroup;
-			children = (
-				C5DF72A52CFB520500D8EC4D /* burning_effect.deepar */,
-				C5DF72A62CFB520500D8EC4D /* Elephant_Trunk.deepar */,
-				C5DF72A72CFB520500D8EC4D /* Emotion_Meter.deepar */,
-				C5DF72A82CFB520500D8EC4D /* Emotions_Exaggerator.deepar */,
-				C5DF72A92CFB520500D8EC4D /* Fire_Effect.deepar */,
-				C5DF72AA2CFB520500D8EC4D /* flower_face.deepar */,
-				C5DF72AB2CFB520500D8EC4D /* galaxy_background.deepar */,
-				C5DF72AC2CFB520500D8EC4D /* Hope.deepar */,
-				C5DF72AD2CFB520500D8EC4D /* Humanoid.deepar */,
-				C5DF72AE2CFB520500D8EC4D /* MakeupLook.deepar */,
-				C5DF72AF2CFB520500D8EC4D /* Neon_Devil_Horns.deepar */,
-				C5DF72B02CFB520500D8EC4D /* Ping_Pong.deepar */,
-				C5DF72B12CFB520500D8EC4D /* Pixel_Hearts.deepar */,
-				C5DF72B22CFB520500D8EC4D /* Snail.deepar */,
-				C5DF72B32CFB520500D8EC4D /* Split_View_Look.deepar */,
-				C5DF72B42CFB520500D8EC4D /* Stallone.deepar */,
-				C5DF72B52CFB520500D8EC4D /* Vendetta_Mask.deepar */,
-				C5DF72B62CFB520500D8EC4D /* viking_helmet.deepar */,
+				C5B1F9F02CFE55BA0080E8AF /* burning_effect.deepar */,
+				C5B1F9F12CFE55BA0080E8AF /* Elephant_Trunk.deepar */,
+				C5B1F9F22CFE55BA0080E8AF /* Emotion_Meter.deepar */,
+				C5B1F9F32CFE55BA0080E8AF /* Emotions_Exaggerator.deepar */,
+				C5B1F9F42CFE55BA0080E8AF /* Fire_Effect.deepar */,
+				C5B1F9F52CFE55BA0080E8AF /* flower_face.deepar */,
+				C5B1F9F62CFE55BA0080E8AF /* galaxy_background.deepar */,
+				C5B1F9F72CFE55BA0080E8AF /* Hope.deepar */,
+				C5B1F9F82CFE55BA0080E8AF /* Humanoid.deepar */,
+				C5B1F9F92CFE55BA0080E8AF /* MakeupLook.deepar */,
+				C5B1F9FA2CFE55BA0080E8AF /* Neon_Devil_Horns.deepar */,
+				C5B1F9FB2CFE55BA0080E8AF /* Ping_Pong.deepar */,
+				C5B1F9FC2CFE55BA0080E8AF /* Pixel_Hearts.deepar */,
+				C5B1F9FD2CFE55BA0080E8AF /* Snail.deepar */,
+				C5B1F9FE2CFE55BA0080E8AF /* Split_View_Look.deepar */,
+				C5B1F9FF2CFE55BA0080E8AF /* Stallone.deepar */,
+				C5B1FA002CFE55BA0080E8AF /* Vendetta_Mask.deepar */,
+				C5B1FA012CFE55BA0080E8AF /* viking_helmet.deepar */,
 			);
 			path = Effects;
+			sourceTree = "<group>";
+		};
+		C5B1FA052CFE55BA0080E8AF /* Streaming */ = {
+			isa = PBXGroup;
+			children = (
+				C5B1FA022CFE55BA0080E8AF /* Effects */,
+				C5B1FA042CFE55BA0080E8AF /* StreamSprint.swift */,
+			);
+			path = Streaming;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +198,6 @@
 				97C146EC1CF9000F007C117D /* Resources */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				F7B2EF417F3CF52D02C1522A /* [CP] Embed Pods Frameworks */,
-				C5DF72A42CFB51D800D8EC4D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +232,8 @@
 				Base,
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
+			packageReferences = (
+			);
 			productRefGroup = 97C146EF1CF9000F007C117D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,25 +249,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
+				C5B1FA062CFE55BA0080E8AF /* Stallone.deepar in Resources */,
+				C5B1FA072CFE55BA0080E8AF /* burning_effect.deepar in Resources */,
+				C5B1FA082CFE55BA0080E8AF /* Elephant_Trunk.deepar in Resources */,
+				C5B1FA092CFE55BA0080E8AF /* Ping_Pong.deepar in Resources */,
+				C5B1FA0A2CFE55BA0080E8AF /* Humanoid.deepar in Resources */,
+				C5B1FA0B2CFE55BA0080E8AF /* Hope.deepar in Resources */,
+				C5B1FA0C2CFE55BA0080E8AF /* Emotions_Exaggerator.deepar in Resources */,
+				C5B1FA0D2CFE55BA0080E8AF /* Split_View_Look.deepar in Resources */,
+				C5B1FA0E2CFE55BA0080E8AF /* Neon_Devil_Horns.deepar in Resources */,
+				C5B1FA0F2CFE55BA0080E8AF /* flower_face.deepar in Resources */,
+				C5B1FA102CFE55BA0080E8AF /* Fire_Effect.deepar in Resources */,
+				C5B1FA112CFE55BA0080E8AF /* galaxy_background.deepar in Resources */,
+				C5B1FA122CFE55BA0080E8AF /* Pixel_Hearts.deepar in Resources */,
+				C5B1FA132CFE55BA0080E8AF /* Snail.deepar in Resources */,
+				C5B1FA142CFE55BA0080E8AF /* MakeupLook.deepar in Resources */,
+				C5B1FA152CFE55BA0080E8AF /* Vendetta_Mask.deepar in Resources */,
+				C5B1FA162CFE55BA0080E8AF /* Emotion_Meter.deepar in Resources */,
+				C5B1FA172CFE55BA0080E8AF /* viking_helmet.deepar in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
-				C5DF72B82CFB520500D8EC4D /* Emotion_Meter.deepar in Resources */,
-				C5DF72B92CFB520500D8EC4D /* Humanoid.deepar in Resources */,
-				C5DF72BA2CFB520500D8EC4D /* Pixel_Hearts.deepar in Resources */,
-				C5DF72BB2CFB520500D8EC4D /* galaxy_background.deepar in Resources */,
-				C5DF72BC2CFB520500D8EC4D /* Hope.deepar in Resources */,
-				C5DF72BD2CFB520500D8EC4D /* flower_face.deepar in Resources */,
-				C5DF72BE2CFB520500D8EC4D /* Neon_Devil_Horns.deepar in Resources */,
-				C5DF72BF2CFB520500D8EC4D /* Fire_Effect.deepar in Resources */,
-				C5DF72C02CFB520500D8EC4D /* MakeupLook.deepar in Resources */,
-				C5DF72C12CFB520500D8EC4D /* Split_View_Look.deepar in Resources */,
-				C5DF72C22CFB520500D8EC4D /* Elephant_Trunk.deepar in Resources */,
-				C5DF72C32CFB520500D8EC4D /* Ping_Pong.deepar in Resources */,
-				C5DF72C42CFB520500D8EC4D /* Stallone.deepar in Resources */,
-				C5DF72C52CFB520500D8EC4D /* Emotions_Exaggerator.deepar in Resources */,
-				C5DF72C62CFB520500D8EC4D /* viking_helmet.deepar in Resources */,
-				C5DF72C72CFB520500D8EC4D /* Snail.deepar in Resources */,
-				C5DF72C82CFB520500D8EC4D /* burning_effect.deepar in Resources */,
-				C5DF72C92CFB520500D8EC4D /* Vendetta_Mask.deepar in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
 			);
@@ -369,9 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
-				C5B1F9652CFE44870080E8AF /* StreamSprint.swift in Sources */,
+				C5B1FA182CFE55BA0080E8AF /* StreamSprint.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
-				C5B1F9632CFE43FD0080E8AF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +440,10 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 3592CW2YHH;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -586,6 +574,10 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 3592CW2YHH;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -610,6 +602,10 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 3592CW2YHH;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
