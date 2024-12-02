@@ -110,14 +110,11 @@ enum Effects: String, CaseIterable {
         self.deepAR.videoRecordingWarmupEnabled = false;
 
         cameraController.startCamera(withAudio: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
-                guard let self = self else { return }
-            didLoadNextFilter()
-        })
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
-                guard let self = self else { return }
-            didLoadNextFilter()
-        })
+        var path: String?
+        effectIndex = 6
+        path = effectPaths[effectIndex]
+        deepAR.switchEffect(withSlot: "effect", path: path)
+    
     }
    
     func didLoadPrevFilter() {

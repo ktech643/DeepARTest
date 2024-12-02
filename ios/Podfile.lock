@@ -3,56 +3,26 @@ PODS:
     - Flutter
   - DeepAR (5.6.12)
   - Flutter (1.0.0)
-  - flutter_ffmpeg (0.4.2):
-    - Flutter
-    - flutter_ffmpeg/https (= 0.4.2)
-  - flutter_ffmpeg/https (0.4.2):
-    - Flutter
-    - mobile-ffmpeg-https (= 4.4)
-  - flutter_webrtc (0.12.2):
-    - Flutter
-    - WebRTC-SDK (= 125.6422.06)
-  - mobile-ffmpeg-https (4.4)
-  - path_provider_foundation (0.0.1):
-    - Flutter
-    - FlutterMacOS
-  - WebRTC-SDK (125.6422.06)
 
 DEPENDENCIES:
   - camera_avfoundation (from `.symlinks/plugins/camera_avfoundation/ios`)
   - DeepAR
   - Flutter (from `Flutter`)
-  - flutter_ffmpeg (from `.symlinks/plugins/flutter_ffmpeg/ios`)
-  - flutter_webrtc (from `.symlinks/plugins/flutter_webrtc/ios`)
-  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
 
 SPEC REPOS:
   trunk:
     - DeepAR
-    - mobile-ffmpeg-https
-    - WebRTC-SDK
 
 EXTERNAL SOURCES:
   camera_avfoundation:
     :path: ".symlinks/plugins/camera_avfoundation/ios"
   Flutter:
     :path: Flutter
-  flutter_ffmpeg:
-    :path: ".symlinks/plugins/flutter_ffmpeg/ios"
-  flutter_webrtc:
-    :path: ".symlinks/plugins/flutter_webrtc/ios"
-  path_provider_foundation:
-    :path: ".symlinks/plugins/path_provider_foundation/darwin"
 
 SPEC CHECKSUMS:
   camera_avfoundation: dd002b0330f4981e1bbcb46ae9b62829237459a4
   DeepAR: b55243ee23fd010eb05ddbca9cb421209b02002c
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_ffmpeg: 26a01318e1fa4ebdbd1561848050aadc807d51a9
-  flutter_webrtc: 1a53bd24f97bcfeff512f13699e721897f261563
-  mobile-ffmpeg-https: 311fc4a8f671cf36d1d6b8f421e8246b790978d9
-  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
-  WebRTC-SDK: 79942c006ea64f6fb48d7da8a4786dfc820bc1db
 
 PODFILE CHECKSUM: ebc72517f9ee30cb0d8b7838d2522962e5bd6465
 

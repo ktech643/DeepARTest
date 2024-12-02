@@ -62,13 +62,20 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Camera Preview")),
-      body: Center(
+      appBar: AppBar(
+        title: const Text("Camera Preview"),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+      ),
+      body: Container(
+        height: MediaQuery.of(context).size.height,
         child: _cameraImage != null
-            ? Image.memory(
-                _cameraImage!,
-                fit: BoxFit.fitHeight,
-                height: MediaQuery.of(context).size.height,
+            ? RepaintBoundary(
+                child: Image.memory(
+                  _cameraImage!,
+                  gaplessPlayback: true, // Prevent flashing between updates
+                  fit: BoxFit.fitHeight,
+                ),
               )
             : const Text("Waiting for camera..."),
       ),
