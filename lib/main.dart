@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:liveness/constants.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,8 +31,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late CameraController _controller;
+
   Uint8List? _cameraImage;
   static const _platform = MethodChannel('SendForProcess');
+  int selectedIndex = 0;
 
   @override
   void initState() {
@@ -70,12 +73,60 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         child: _cameraImage != null
-            ? RepaintBoundary(
-                child: Image.memory(
-                  _cameraImage!,
-                  gaplessPlayback: true, // Prevent flashing between updates
-                  fit: BoxFit.fitHeight,
-                ),
+            ? Column(
+                children: [
+                  SizedBox(
+                    height: 40,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: effectsList.length,
+                        itemBuilder: (context, index) {
+                          String data = effectsList[index];
+                          bool isSelected = selectedIndex == index;
+                          return Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  selectedIndex = index;
+                                });
+                                _platform.invokeMethod<Uint8List>(
+                                  "changeEffect",
+                                  {"effect": data},
+                                );
+                              },
+                              child: Chip(
+                                label: Text(
+                                  data,
+                                  style: TextStyle(
+                                      color: isSelected
+                                          ? Colors.white
+                                          : Colors.black),
+                                ),
+                                backgroundColor: selectedIndex == index
+                                    ? Colors.lightBlue
+                                    : Colors.white54,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(25)),
+                              ),
+                            ),
+                          );
+                        }),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Expanded(
+                    child: RepaintBoundary(
+                      child: Image.memory(
+                        _cameraImage!,
+                        gaplessPlayback:
+                            true, // Prevent flashing between updates
+                        fit: BoxFit.fitHeight,
+                      ),
+                    ),
+                  ),
+                ],
               )
             : const Text("Waiting for camera..."),
       ),

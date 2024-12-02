@@ -44,6 +44,8 @@ enum Effects: String, CaseIterable {
 @main
 @objc class AppDelegate: FlutterAppDelegate {
         
+    let sharedResourceQueue = DispatchQueue(label: "com.ktc.mytest", qos: .userInitiated, attributes: .concurrent)
+
     private var methodChannel: FlutterMethodChannel?
         
     private var deepAR: DeepAR!
@@ -76,45 +78,77 @@ enum Effects: String, CaseIterable {
                 guard let self = self else { return }
                 switch call.method {
                 case "checkLiveness":
-                    if let data = call.arguments as? [String: Any] {
+                    if let _ = call.arguments as? [String: Any] {
                         setupDeepARAndCamera()
                       //  self?.checkLiveness(data: data)
                        // self?.deepAR.takeScreenshot()
                     } else {
                         result(FlutterMethodNotImplemented)
                     }
+                case "changeEffect":
+                    if let effectData = call.arguments as? [String: Any] {
+                        if let effectName = effectData["effect"] as? String {
+                            print("Effect Name:",effectName)
+                            applyEffect(name: effectName)
+                        }
+                    }
                 default:
                     result(FlutterMethodNotImplemented)
                 }
             })
             methodChannel = FlutterMethodChannel(name: "SendForProcess", binaryMessenger: controller.binaryMessenger)
-
-                 
         }
-        
-        
         GeneratedPluginRegistrant.register(with: self)
-        
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
     private func setupDeepARAndCamera() {
         
-        self.deepAR = DeepAR()
-        self.deepAR.delegate = self
-        self.deepAR.setLicenseKey("8e2d8c59efc7a141b49c2422c0dfedbcf6cacc0e0b540779f45d928ad54718f68ccbd8fd41ac5fb7")
-        deepAR.changeLiveMode(false)
-        deepAR.initializeOffscreen(withWidth: 720, height: 1080)
-        cameraController = CameraController()
-        cameraController.deepAR = self.deepAR
-        self.deepAR.videoRecordingWarmupEnabled = false;
-
-        cameraController.startCamera(withAudio: true)
-        var path: String?
-        effectIndex = 6
-        path = effectPaths[effectIndex]
-        deepAR.switchEffect(withSlot: "effect", path: path)
+        let dispatchSemaphore = DispatchSemaphore(value: 0)
+        let backgroundQueue = DispatchQueue(label: "com.ktc.mytest",
+                                            qos: .userInteractive)
+        backgroundQueue.async { [weak self] in
+            guard let self = self else { return }
+            sharedResourceAccess { [weak self] in
+                guard let self = self else { return }
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    deepAR = DeepAR()
+                    deepAR.delegate = self
+                    deepAR.setLicenseKey("8e2d8c59efc7a141b49c2422c0dfedbcf6cacc0e0b540779f45d928ad54718f68ccbd8fd41ac5fb7")
+                    deepAR.changeLiveMode(false)
+                    deepAR.initializeOffscreen(withWidth: 720, height: 1080)
+                    cameraController = CameraController()
+                    cameraController.deepAR = self.deepAR
+                    deepAR.videoRecordingWarmupEnabled = false;
+                    cameraController.startCamera(withAudio: true)
+                }
+                dispatchSemaphore.signal()
+            }
+            
+            _ = dispatchSemaphore.wait(timeout: DispatchTime.distantFuture)
+            
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                
+            }
+        }
+        
     
+    }
+    
+    func sharedResourceAccess(_ accessBlock: @escaping () -> Void) {
+        sharedResourceQueue.async(flags: .barrier) {
+            accessBlock()
+        }
+    }
+    
+    func applyEffect(name : String) {
+        if let effectPath = Bundle.main.path(forResource: name, ofType: "deepar") {
+            deepAR.switchEffect(withSlot: "effect", path: effectPath)
+        }else {
+            deepAR.switchEffect(withSlot: "effect", path: nil)
+        }
     }
    
     func didLoadPrevFilter() {
@@ -134,7 +168,7 @@ enum Effects: String, CaseIterable {
 
 extension AppDelegate : DeepARDelegate {
     
-    func cvImageBufferToData(pixelBuffer: CVImageBuffer, compressionQuality: CGFloat = 0.8) -> Data? {
+    func cvImageBufferToData(pixelBuffer: CVImageBuffer) -> Data? {
         // 1. Lock the pixel buffer for thread-safe access.
         CVPixelBufferLockBaseAddress(pixelBuffer, .readOnly)
         
@@ -157,18 +191,16 @@ extension AppDelegate : DeepARDelegate {
         let image = UIImage(cgImage: cgImage)
         
         // 7. Compress the UIImage to JPEG or PNG data.
-        return image.jpegData(compressionQuality: compressionQuality)
+        return image.pngData()
         // For PNG format, use this instead:
         // return image.pngData()
     }
     
     func frameAvailable(_ sampleBuffer: CMSampleBuffer!) {
-        print("My Buffer:",sampleBuffer ?? "")
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             print("*** NO BUFFER ERROR")
             return
         }
-        let image = cvImageBufferToData(pixelBuffer: pixelBuffer)
         if let imageData = cvImageBufferToData(pixelBuffer: pixelBuffer) {
             methodChannel?.invokeMethod("updateCameraFrame", arguments: imageData)
         }
