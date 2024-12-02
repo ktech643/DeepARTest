@@ -36,8 +36,6 @@ import VideoToolbox
                     if let _ = call.arguments as? [String: Any] {
                         streamSprint = StreamSprint(licenseKey: key)
                         streamSprint.delegate = self
-                      //  self?.checkLiveness(data: data)
-                       // self?.deepAR.takeScreenshot()
                     } else {
                         result(FlutterMethodNotImplemented)
                     }
@@ -52,11 +50,6 @@ import VideoToolbox
                 }
             })
             methodChannel = FlutterMethodChannel(name: "SendForProcess", binaryMessenger: controller.binaryMessenger)
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: { [weak self] in
-                guard let self = self else { return }
-                closeStream()
-            })
         }
         GeneratedPluginRegistrant.register(with: self)
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
