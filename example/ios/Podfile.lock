@@ -1,0 +1,35 @@
+PODS:
+  - DeepAR (5.6.12)
+  - Flutter (1.0.0)
+  - impekt_deepar (1.0.0):
+    - DeepAR
+    - Flutter
+  - integration_test (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - impekt_deepar (from `.symlinks/plugins/impekt_deepar/ios`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+
+SPEC REPOS:
+  trunk:
+    - DeepAR
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  impekt_deepar:
+    :path: ".symlinks/plugins/impekt_deepar/ios"
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+
+SPEC CHECKSUMS:
+  DeepAR: b55243ee23fd010eb05ddbca9cb421209b02002c
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  impekt_deepar: 972b117d24d9ab19eb3671c507727053bc3fc8e5
+  integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
+
+PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+
+COCOAPODS: 1.15.2
