@@ -94,7 +94,7 @@ public class StreamSprint : NSObject , DeepARDelegate {
         // Create CGImage from CIImage
         if let cgImage = context.createCGImage(ciImage, from: ciImage.extent) {
             let uiImage = UIImage(cgImage: cgImage)
-            return uiImage.pngData()
+            return uiImage.jpegData(compressionQuality: 0.5)
         }
         return nil
     }
