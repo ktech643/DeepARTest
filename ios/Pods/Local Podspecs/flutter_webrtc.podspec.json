@@ -1,0 +1,30 @@
+{
+  "name": "flutter_webrtc",
+  "version": "0.12.2",
+  "summary": "Flutter WebRTC plugin for iOS.",
+  "description": "A new flutter plugin project.",
+  "homepage": "https://github.com/cloudwebrtc/flutter-webrtc",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "CloudWebRTC": "duanweiwei1982@gmail.com"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "Classes/**/*",
+  "public_header_files": "Classes/**/*.h",
+  "dependencies": {
+    "Flutter": [
+
+    ],
+    "WebRTC-SDK": [
+      "125.6422.06"
+    ]
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "static_framework": true
+}

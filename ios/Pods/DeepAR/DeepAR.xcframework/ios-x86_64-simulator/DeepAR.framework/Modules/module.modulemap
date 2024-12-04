@@ -1,0 +1,13 @@
+framework module DeepAR {
+    module DeepAR {
+        header "DeepAR.h"
+        export *
+    }
+    
+    module CameraController {
+        header "CameraController.h"
+        export *
+    }
+  
+  //module * { export * }
+}

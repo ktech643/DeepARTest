@@ -27,8 +27,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   DeepAR: b55243ee23fd010eb05ddbca9cb421209b02002c
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  impekt_deepar: 972b117d24d9ab19eb3671c507727053bc3fc8e5
-  integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
+  impekt_deepar: 47c61f63ab2536b92d9ff49125e66b4b88892eef
+  integration_test: 252f60fa39af5e17c3aa9899d35d908a0721b573
 
 PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
 

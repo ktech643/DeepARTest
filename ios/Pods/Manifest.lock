@@ -1,0 +1,29 @@
+PODS:
+  - camera_avfoundation (0.0.1):
+    - Flutter
+  - DeepAR (5.6.12)
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - camera_avfoundation (from `.symlinks/plugins/camera_avfoundation/ios`)
+  - DeepAR
+  - Flutter (from `Flutter`)
+
+SPEC REPOS:
+  trunk:
+    - DeepAR
+
+EXTERNAL SOURCES:
+  camera_avfoundation:
+    :path: ".symlinks/plugins/camera_avfoundation/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  camera_avfoundation: dd002b0330f4981e1bbcb46ae9b62829237459a4
+  DeepAR: b55243ee23fd010eb05ddbca9cb421209b02002c
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+
+PODFILE CHECKSUM: ebc72517f9ee30cb0d8b7838d2522962e5bd6465
+
+COCOAPODS: 1.15.2

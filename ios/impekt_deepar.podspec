@@ -21,11 +21,10 @@ A new Flutter plugin project that integrates the DeepAR SDK for liveness check a
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
+ s.resources = ['Assets/**']
 
-  s.resource_bundles = {
-    'impekt_deepar' => ['Classes/**/*']
-  }
-  # s.resource_bundles = {
-  #   'impekt_deepar' => ['Classes/Effects/**/*']
-  # }
+#  s.resource_bundles = {
+#   'effects' => ['Assets/**'] # Adjust to actual asset path
+# }
+  
 end

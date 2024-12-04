@@ -69,24 +69,18 @@ public class StreamSprint : NSObject , DeepARDelegate {
     }
     
     public func applyEffect(effect : Effects) {
-        
-        if let bundleURL = Bundle.main.url(forResource: "effects", withExtension: "bundle") {
-                // Load the bundle
-                if let bundle = Bundle(url: bundleURL) {
-                    // Find the specific effect file inside the bundle
-                    if let effectFilePath = bundle.path(forResource: effect.rawValue, ofType: "deepar") {
-                        print("Effect file found at: \(effectFilePath)")
-                        // Return the content of the effect file
-                    } else {
-                        print("Effect file '\(effect.rawValue)' not found in bundle.")
-                    }
-                } else {
-                    print("Unable to load the bundle.")
-                }
+        let bundle = Bundle(for: StreamSprint.self)
+        if let resourceBundle = Bundle(url: bundle.url(forResource: "effects", withExtension: "bundle")!) {
+            print("Effect file found",resourceBundle)
+            if let effectFilePath = resourceBundle.path(forResource: "\(effect.rawValue).deepar", ofType: nil) {
+                deepAR.switchEffect(withSlot: "effect", path: effectFilePath)
+                // Return the content of the effect file
             } else {
-                print("Unable to find the bundle.")
+                deepAR.switchEffect(withSlot: "effect", path: nil)
             }
-//        if let effectPath = Bundle.main.path(forResource: effect.rawValue, ofType: "deepar") {
+        }
+       
+//        if let effectPath = bundle.path(forResource: effect.rawValue, ofType: "deepar") {
 //            deepAR.switchEffect(withSlot: "effect", path: effectPath)
 //        }else {
 //            deepAR.switchEffect(withSlot: "effect", path: nil)

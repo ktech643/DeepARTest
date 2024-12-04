@@ -39,7 +39,6 @@ class LivenessWidgetState extends State<ImpektDeepar> {
       setState(() {
         _cameraImage = call.arguments as Uint8List;
       });
-      print(_cameraImage.toString());
     }
   }
 

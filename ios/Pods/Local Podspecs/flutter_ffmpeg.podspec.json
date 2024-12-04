@@ -1,0 +1,243 @@
+{
+  "name": "flutter_ffmpeg",
+  "version": "0.4.2",
+  "summary": "FFmpeg plugin for Flutter.",
+  "description": "FFmpeg plugin based on mobile-ffmpeg for Flutter.",
+  "homepage": "https://github.com/tanersener/flutter-ffmpeg",
+  "authors": {
+    "Taner Sener": "tanersener@gmail.com"
+  },
+  "license": {
+    "file": "../LICENSE"
+  },
+  "requires_arc": true,
+  "static_framework": true,
+  "source": {
+    "path": "."
+  },
+  "source_files": "Classes/**/*",
+  "public_header_files": "Classes/**/*.h",
+  "default_subspecs": "https",
+  "dependencies": {
+    "Flutter": [
+
+    ]
+  },
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "visionos": null,
+    "watchos": null
+  },
+  "subspecs": [
+    {
+      "name": "min",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-min": [
+          "4.4"
+        ]
+      },
+      "platforms": {
+        "ios": "11.0"
+      }
+    },
+    {
+      "name": "min-lts",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-min": [
+          "4.4.LTS"
+        ]
+      },
+      "platforms": {
+        "ios": "9.3"
+      }
+    },
+    {
+      "name": "min-gpl",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-min-gpl": [
+          "4.4"
+        ]
+      },
+      "platforms": {
+        "ios": "11.0"
+      }
+    },
+    {
+      "name": "min-gpl-lts",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-min-gpl": [
+          "4.4.LTS"
+        ]
+      },
+      "platforms": {
+        "ios": "9.3"
+      }
+    },
+    {
+      "name": "https",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-https": [
+          "4.4"
+        ]
+      },
+      "platforms": {
+        "ios": "11.0"
+      }
+    },
+    {
+      "name": "https-lts",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-https": [
+          "4.4.LTS"
+        ]
+      },
+      "platforms": {
+        "ios": "9.3"
+      }
+    },
+    {
+      "name": "https-gpl",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-https-gpl": [
+          "4.4"
+        ]
+      },
+      "platforms": {
+        "ios": "11.0"
+      }
+    },
+    {
+      "name": "https-gpl-lts",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-https-gpl": [
+          "4.4.LTS"
+        ]
+      },
+      "platforms": {
+        "ios": "9.3"
+      }
+    },
+    {
+      "name": "audio",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-audio": [
+          "4.4"
+        ]
+      },
+      "platforms": {
+        "ios": "11.0"
+      }
+    },
+    {
+      "name": "audio-lts",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-audio": [
+          "4.4.LTS"
+        ]
+      },
+      "platforms": {
+        "ios": "9.3"
+      }
+    },
+    {
+      "name": "video",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-video": [
+          "4.4"
+        ]
+      },
+      "platforms": {
+        "ios": "11.0"
+      }
+    },
+    {
+      "name": "video-lts",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-video": [
+          "4.4.LTS"
+        ]
+      },
+      "platforms": {
+        "ios": "9.3"
+      }
+    },
+    {
+      "name": "full",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-full": [
+          "4.4"
+        ]
+      },
+      "platforms": {
+        "ios": "11.0"
+      }
+    },
+    {
+      "name": "full-lts",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-full": [
+          "4.4.LTS"
+        ]
+      },
+      "platforms": {
+        "ios": "9.3"
+      }
+    },
+    {
+      "name": "full-gpl",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-full-gpl": [
+          "4.4"
+        ]
+      },
+      "platforms": {
+        "ios": "11.0"
+      }
+    },
+    {
+      "name": "full-gpl-lts",
+      "source_files": "Classes/**/*",
+      "public_header_files": "Classes/**/*.h",
+      "dependencies": {
+        "mobile-ffmpeg-full-gpl": [
+          "4.4.LTS"
+        ]
+      },
+      "platforms": {
+        "ios": "9.3"
+      }
+    }
+  ]
+}
