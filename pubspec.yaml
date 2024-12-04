@@ -36,9 +36,9 @@ flutter:
     platforms:
       android:
         package: com.example.impekt_deepar
-        pluginClass: ImpektDeeparPlugin
+        pluginClass: impektDeeparPlugin
       ios:
-        pluginClass: ImpektDeeparPlugin
+        pluginClass: impektDeeparPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

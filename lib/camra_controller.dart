@@ -1,76 +1,79 @@
 import 'dart:typed_data';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 
-class ARCameraController {
-  late MethodChannel channel = MethodChannel("impekt_deepar");
+class CameraProcessor {
+  late MethodChannel channel;
   final String deepArKey;
-  int? frameWidth = 720;
-  int? frameHeight = 1080;
-  Function(Uint8List)? onCameraFrameUpdate;
+  final Function(Uint8List) onCameraFrameUpdate;
+  int? frameWidth;
+  int? frameHeight;
 
-  ARCameraController(
-      {required this.deepArKey, this.frameWidth, this.frameHeight});
+  CameraProcessor({
+    required this.deepArKey,
+    this.frameWidth = 720,
+    this.frameHeight = 1080,
+    required this.onCameraFrameUpdate,
+  }) {
+    channel = MethodChannel("impekt_deepar");
 
-  // Initialize liveness detection
-  Future<void> initializeLiveness({required bytes}) async {
-    //channel = MethodChannel("impekt_deepar");
-    try {
-      await channel.invokeMethod("checkLiveness", {
-        "key": deepArKey,
-        "width": frameWidth,
-        "height": frameHeight,
-        "bytes": bytes
-      });
-      callBack();
-    } on PlatformException catch (e) {
-      print("Error initializing liveness: ${e.message}");
-    }
+    // Ensure the handler is set after Flutter binding is initialized.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _setupMethodCallHandler();
+      initialize();
+    });
   }
 
-  Future<Uint8List?> callBack() async {
-    // Set up the method call handler
-
+  void _setupMethodCallHandler() {
     channel.setMethodCallHandler((call) async {
-      if (call.method == "updateCameraFrame") {
+      if (call.method == "receiveProcessedFrame") {
         Uint8List cameraFrame = call.arguments as Uint8List;
-        onCameraFrameUpdate?.call(cameraFrame); // Notify the listener
-        // return cameraFrame;
+        onCameraFrameUpdate(cameraFrame); // Notify via the callback
       }
     });
   }
 
-  // Start Camera
-  Future<void> startCamera() async {
+  Future<void> initializeLiveness({
+    required Uint8List bytes,
+    required int height,
+    required int width,
+    required int bytesPerRow,
+  }) async {
     try {
-      // await initializeLiveness();
-    } on PlatformException catch (e) {
-      print("Error starting camera: ${e.message}");
-    }
+      await channel.invokeMethod("sendFrameForProcess", {
+        'platforms': bytes,
+        'height': height,
+        'width': width,
+        "bytesPerRow": bytesPerRow,
+      });
+    } on PlatformException catch (e) {}
   }
 
-  // Dispose Camera
+  Future<void> initialize() async {
+    try {
+      await channel.invokeMethod("initialize", {
+        "key": deepArKey,
+        "width": frameWidth,
+        "height": frameHeight,
+      });
+    } on PlatformException catch (e) {}
+  }
+
+  Future<void> startCamera() async {
+    try {
+      await channel.invokeMethod("startCamera");
+    } on PlatformException catch (e) {}
+  }
+
   Future<void> disposeCamera() async {
     try {
       await channel.invokeMethod("disposeCamera");
-    } on PlatformException catch (e) {
-      print("Error disposing camera: ${e.message}");
-    }
+    } on PlatformException catch (e) {}
   }
 
-  // Change Effect
   Future<void> changeEffect(String effect) async {
     try {
       await channel.invokeMethod("changeEffect", {"effect": effect});
-    } on PlatformException catch (e) {
-      print("Error changing effect: ${e.message}");
-    }
-  }
-
-  Future<Uint8List?> onMethodCall(MethodCall call) async {
-    Uint8List? bytes;
-    if (call.method == "updateCameraFrame") {
-      bytes = call.arguments as Uint8List;
-      return bytes;
-    }
+    } on PlatformException catch (e) {}
   }
 }

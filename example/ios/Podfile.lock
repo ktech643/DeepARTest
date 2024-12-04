@@ -1,4 +1,6 @@
 PODS:
+  - camera_avfoundation (0.0.1):
+    - Flutter
   - DeepAR (5.6.12)
   - Flutter (1.0.0)
   - impekt_deepar (1.0.0):
@@ -8,6 +10,7 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - camera_avfoundation (from `.symlinks/plugins/camera_avfoundation/ios`)
   - Flutter (from `Flutter`)
   - impekt_deepar (from `.symlinks/plugins/impekt_deepar/ios`)
   - integration_test (from `.symlinks/plugins/integration_test/ios`)
@@ -17,6 +20,8 @@ SPEC REPOS:
     - DeepAR
 
 EXTERNAL SOURCES:
+  camera_avfoundation:
+    :path: ".symlinks/plugins/camera_avfoundation/ios"
   Flutter:
     :path: Flutter
   impekt_deepar:
@@ -25,10 +30,11 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/integration_test/ios"
 
 SPEC CHECKSUMS:
+  camera_avfoundation: dd002b0330f4981e1bbcb46ae9b62829237459a4
   DeepAR: b55243ee23fd010eb05ddbca9cb421209b02002c
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  impekt_deepar: 47c61f63ab2536b92d9ff49125e66b4b88892eef
-  integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
+  impekt_deepar: 40b6606bc9b8ca4c4d9dd00c7b9e3cd8f3698636
+  integration_test: 252f60fa39af5e17c3aa9899d35d908a0721b573
 
 PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
 

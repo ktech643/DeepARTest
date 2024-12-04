@@ -5,9 +5,9 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 A new Flutter plugin project that integrates the DeepAR SDK for liveness check and AR effects.
                        DESC
-  s.homepage         = 'https://www.impakt.com'
+  s.homepage         = 'https://www.impekt.com'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Impakt' => 'support@impakt.com' }
+  s.author           = { 'impekt' => 'support@impekt.com' }
   s.source           = { :path => '.' }
   s.source_files     = 'Classes/**/*'
   s.dependency 'Flutter'

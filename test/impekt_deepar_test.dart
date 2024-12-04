@@ -4,24 +4,24 @@ import 'package:impekt_deepar/impekt_deepar_platform_interface.dart';
 import 'package:impekt_deepar/impekt_deepar_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-class MockImpektDeeparPlatform
+class MockimpektDeeparPlatform
     with MockPlatformInterfaceMixin
-    implements ImpektDeeparPlatform {
+    implements impektDeeparPlatform {
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
 }
 
 void main() {
-  final ImpektDeeparPlatform initialPlatform = ImpektDeeparPlatform.instance;
+  final impektDeeparPlatform initialPlatform = impektDeeparPlatform.instance;
 
-  test('$MethodChannelImpektDeepar is the default instance', () {
-    expect(initialPlatform, isInstanceOf<MethodChannelImpektDeepar>());
+  test('$MethodChannelimpektDeepar is the default instance', () {
+    expect(initialPlatform, isInstanceOf<MethodChannelimpektDeepar>());
   });
 
   test('getPlatformVersion', () async {
-    // ImpektDeepar impektDeeparPlugin = ImpektDeepar();
-    MockImpektDeeparPlatform fakePlatform = MockImpektDeeparPlatform();
-    ImpektDeeparPlatform.instance = fakePlatform;
+    // impektDeepar impektDeeparPlugin = impektDeepar();
+    MockimpektDeeparPlatform fakePlatform = MockimpektDeeparPlatform();
+    impektDeeparPlatform.instance = fakePlatform;
 
     //expect(await impektDeeparPlugin.getPlatformVersion(), '42');
   });
