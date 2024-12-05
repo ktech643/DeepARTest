@@ -40,7 +40,6 @@ public protocol StreamSprintDelegate : AnyObject {
 public class StreamSprint : NSObject , DeepARDelegate {
     
     // MARK: - Private properties -
-    private var cameraController: CameraController!
     private var deepAR: DeepAR!
     public var delegate : StreamSprintDelegate?
     
@@ -51,7 +50,7 @@ public class StreamSprint : NSObject , DeepARDelegate {
     }
     
     private func setupDeepARAndCamera(licenseKey : String,height : Int, width : Int) {
-        DispatchQueue.global(qos: .userInteractive).async {  [weak self] in
+        DispatchQueue.global(qos: .userInitiated).async {  [weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
@@ -61,11 +60,6 @@ public class StreamSprint : NSObject , DeepARDelegate {
                 deepAR.changeLiveMode(false)
                 deepAR.enableAudioProcessing(false)
                 deepAR.initializeOffscreen(withWidth: width, height: height)
-                
-//                cameraController = CameraController()
-//                cameraController.deepAR = self.deepAR
-//                deepAR.videoRecordingWarmupEnabled = false;
-//                cameraController.startCamera(withAudio: true)
             }
         }
     }
@@ -74,16 +68,16 @@ public class StreamSprint : NSObject , DeepARDelegate {
         let bundle = Bundle(for: StreamSprint.self)
         if let resourceBundle = Bundle(url: bundle.url(forResource: "effects", withExtension: "bundle")!) {
             if let effectFilePath = resourceBundle.path(forResource: "\(effect.rawValue).deepar", ofType: nil) {
-                deepAR.switchEffect(withSlot: "effect", path: effectFilePath)
+                deepAR?.switchEffect(withSlot: "effect", path: effectFilePath)
             } else {
-                deepAR.switchEffect(withSlot: "effect", path: nil)
+                deepAR?.switchEffect(withSlot: "effect", path: nil)
             }
         }
        
 //        if let effectPath = bundle.path(forResource: effect.rawValue, ofType: "deepar") {
-//            deepAR.switchEffect(withSlot: "effect", path: effectPath)
+//            deepAR?.switchEffect(withSlot: "effect", path: effectPath)
 //        }else {
-//            deepAR.switchEffect(withSlot: "effect", path: nil)
+//            deepAR?.switchEffect(withSlot: "effect", path: nil)
 //        }
     }
     
@@ -94,14 +88,12 @@ public class StreamSprint : NSObject , DeepARDelegate {
     public func processImage(image : UIImage) {
         if let pixelBuffer = convertUIImageToCVPixelBuffer(image: image) {
             let timestamp = CMTimeValue(20) // 1/30th of a second
-            deepAR.processFrame(pixelBuffer, mirror: false, timestamp: timestamp)
+            deepAR?.processFrame(pixelBuffer, mirror: false, timestamp: timestamp)
         }
     }
     
     public func dispose(){
-        cameraController?.stopAudio()
-        cameraController?.stopCamera()
-        cameraController = nil
+        deepAR?.shutdown()
         deepAR?.delegate = nil
         deepAR = nil
     }
@@ -174,31 +166,6 @@ public class StreamSprint : NSObject , DeepARDelegate {
         CVPixelBufferUnlockBaseAddress(buffer, [])
         
         return buffer
-    }
-    
-    private func buffer(image: UIImage) -> CVPixelBuffer? {
-      let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
-      var pixelBuffer : CVPixelBuffer?
-      let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(image.size.width), Int(image.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
-      guard (status == kCVReturnSuccess) else {
-        return nil
-      }
-
-      CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-      let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
-
-      let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
-        let context = CGContext(data: pixelData, width: Int(image.size.width), height: Int(image.size.height), bitsPerComponent: image.cgImage?.bitsPerComponent ?? 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
-
-      context?.translateBy(x: 0, y: image.size.height)
-      context?.scaleBy(x: 1.0, y: -1.0)
-
-      UIGraphicsPushContext(context!)
-      image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
-      UIGraphicsPopContext()
-      CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-
-      return pixelBuffer
     }
     
 }

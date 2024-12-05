@@ -30,30 +30,32 @@ public class impektDeeparPlugin: NSObject, FlutterPlugin {
             }
         case "sendFrameForProcess":
             if let data = call.arguments as? [String: Any] {
-                self.checkLiveness(data: data)
+                self.sendFrameForProcess(data: data)
             } else {
                 result(FlutterMethodNotImplemented)
             }
         case "changeEffect":
             if let effectData = call.arguments as? [String: Any] {
                 if let effectName = effectData["effect"] as? String {
-                    streamSprint.applyEffect(effect: Effects.init(rawValue: effectName)!)
+                    streamSprint?.applyEffect(effect: Effects.init(rawValue: effectName)!)
                 }
             }
         case "disposeCamera":
             if let _ = call.arguments as? [String : Any] {
                 
             }
-            streamSprint.dispose()
+            streamSprint?.dispose()
             streamSprint = nil
         default:
             result(FlutterMethodNotImplemented)
         }
-    }
-    private func checkLiveness(data: [String: Any]) {
-        guard let imageWidth = data["width"] as? Int, let imageHeight = data["height"] as? Int else { return }
         
-       // Initialize Liveness over here
+    }
+    
+    private func sendFrameForProcess(data: [String: Any]) {
+        guard let imageWidth = data["width"] as? Int, let imageHeight = data["height"] as? Int else {
+            return
+        }
         
         guard let flutterData = data["platforms"] as? FlutterStandardTypedData,
               let bytesPerRow = data["bytesPerRow"] as? Int else {
@@ -69,7 +71,6 @@ public class impektDeeparPlugin: NSObject, FlutterPlugin {
         if let streamSprint = streamSprint {
             streamSprint.processImage(image: image)
         }
-        // Feed image into liveness
     }
     
     private func createUIImageFromRawData(data: Data, imageWidth: Int, imageHeight: Int, bytes: Int) -> UIImage? {
